@@ -15,4 +15,10 @@ func main() {
 	r.HandleFunc("/comic/vols/{volID}", comic.VolHandler)
 	http.Handle("/", r)
 	log.Fatal(http.ListenAndServe(":8080", r))
+	// comic.UpdateWholeData()
+
+	//定时任务
+	// c := cron.New()
+	// c.AddFunc("@midnight", main)
+	// c.Start()
 }
